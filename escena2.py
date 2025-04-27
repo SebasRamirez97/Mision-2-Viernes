@@ -7,27 +7,39 @@ def desicion2(desicion_anterior:int , jugador:str)->int:
     '''Recibe el numero de la desicion de la escena anterior'''
     match desicion_anterior:
         case 1:
+            i = 0
+            j = 0
             nueva_desicion = 0
             chances = 3
-            while(nueva_desicion !=1 and nueva_desicion !=2 and nueva_desicion !=3 ):
-                nueva_desicion = int("1 Quedarse en la oscuridad y esperar \n" \
-                                 "2 Buscar algo para hacer luz \n" \
-                                 "3 Salir a explorar \n")
+            while(nueva_desicion !=2 and nueva_desicion !=3 ):
+                nueva_desicion = int(input("1 Quedarse en la oscuridad y esperar. \n" \
+                                 "2 Buscar algo para hacer luz. \n" \
+                                 "3 Salir a explorar. \n"))
                 match nueva_desicion:
                     case 1:
-                        pass
+                        j += 1
+                        sugerencia = f"{jugador} creo que has esperado un buen tiempo no hay señales de que vuelva la luz, "\
+                        "toma otra decision.\n"
+                        if j >= 2:
+                            sugerencia = f"Cuidado {jugador} puede ser peligroso quedarse tanto tiempo en la oscuridad, "\
+                            "busca otra manera.\n"
+                        es_tarde = "Has esperado demasiado, ya es tarde, no hay escapatoria."
+                        consecuencia = f"NADIE SUPO MAS NADA DE {jugador.upper()}"
+                        funciones_repetidas.oportunidad(j,chances,sugerencia,es_tarde,consecuencia)
+                        if(j==chances):
+                            return 0
                     case 2:
                         pass
                     case 3:
                         pass
                     case _:
                         i += 1
-                        advertencia = "Cuidado con lo que pones"
-                        te_lo_dije = f"Fuiate advertido {jugador}"
+                        advertencia = "Esa no es una opcion, no hay tiempo"
+                        te_lo_dije = f"Te dije que no habia tiempO, Jason esta detras de ti"
                         consecuencia = "JASON TE VUELA LA CABEZA DE UNA PIÑA"
                         funciones_repetidas.oportunidad(i,chances,advertencia,te_lo_dije,consecuencia)
                         if(i == chances):
-                          return 0
+                            return 0
             
         case 2:
             nueva_desicion = int(input())
@@ -42,10 +54,11 @@ def desicion2(desicion_anterior:int , jugador:str)->int:
                 "2 Huir \n\n"))
                 match nueva_desicion:
                     case 1:
-                        print("¿Estas loco?, como vas a enfrentarte " \
-                        "al mismisimo Jason sin siquiera un arma")
-                        dialogos_repetidos.perder("Una patada " \
-                        "en la cara no es suficiente")
+                        situacion = "¿Estas loco?, ¿como vas a enfrentarte " \
+                        "al mismisimo Jason cuerpo a cuerpo?\n" \
+                        "*Intentas darle una patada en la cara*" 
+                        final = "Te tropiezas y te quiebras el cuello MUERTE"
+                        dialogos_repetidos.perder(situacion,final)
                         return 0
                     case 2:
                         print("Huyes al bosque y por conveniencia de la trama" \

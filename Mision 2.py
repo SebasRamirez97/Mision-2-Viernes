@@ -12,8 +12,8 @@ print(f"Que tal {jugador}, no quiero ser portador de malas noticias" \
 " justo has llegado en la temporada de homicidios, la buena noticia es" \
 " que si tomas las deciciones correctas puede ser que sobrevivas. \n")
 
-valor = escena1.desicion1(jugador)
-escena2.desicion2(valor,jugador)
+#valor = escena1.desicion1(jugador)
+escena2.desicion2(1,jugador)
 
 
 
