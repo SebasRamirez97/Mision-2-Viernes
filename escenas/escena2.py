@@ -1,7 +1,7 @@
 import time
 
-import dialogos_repetidos
-import funciones_repetidas
+import dialogos.dialogos_repetidos
+import funciones.funciones_repetidas
 
 def desicion2(desicion_anterior:int , jugador:str)->int:
     '''Recibe el numero de la desicion de la escena anterior'''
@@ -25,7 +25,7 @@ def desicion2(desicion_anterior:int , jugador:str)->int:
                             "busca otra manera.\n"
                         es_tarde = "Has esperado demasiado, ya es tarde, no hay escapatoria."
                         consecuencia = f"NADIE SUPO MAS NADA DE {jugador.upper()}"
-                        funciones_repetidas.oportunidad(j,chances,sugerencia,es_tarde,consecuencia)
+                        funciones.funciones_repetidas.oportunidad(j,chances,sugerencia,es_tarde,consecuencia)
                         if(j==chances):
                             return 0
                     case 2:
@@ -35,9 +35,9 @@ def desicion2(desicion_anterior:int , jugador:str)->int:
                     case _:
                         i += 1
                         advertencia = "Esa no es una opcion, no hay tiempo"
-                        te_lo_dije = f"Te dije que no habia tiempO, Jason esta detras de ti"
+                        te_lo_dije = f"Te dije que no habia tiempo, Jason esta detras de ti"
                         consecuencia = "JASON TE VUELA LA CABEZA DE UNA PIÑA"
-                        funciones_repetidas.oportunidad(i,chances,advertencia,te_lo_dije,consecuencia)
+                        funciones.funciones_repetidas.oportunidad(i,chances,advertencia,te_lo_dije,consecuencia)
                         if(i == chances):
                             return 0
             
@@ -57,8 +57,8 @@ def desicion2(desicion_anterior:int , jugador:str)->int:
                         situacion = "¿Estas loco?, ¿como vas a enfrentarte " \
                         "al mismisimo Jason cuerpo a cuerpo?\n" \
                         "*Intentas darle una patada en la cara*" 
-                        final = "Te tropiezas y te quiebras el cuello MUERTE"
-                        dialogos_repetidos.perder(situacion,final)
+                        final = "TE TROPIEZAS Y QUIEBRAS EL CUELLO MUERTE"
+                        dialogos.dialogos_repetidos.perder(situacion,final)
                         return 0
                     case 2:
                         print("Huyes al bosque y por conveniencia de la trama" \
@@ -69,7 +69,7 @@ def desicion2(desicion_anterior:int , jugador:str)->int:
                         " toma una buena decision"
                         te_lo_dije = f"Te lo adverti {jugador}"
                         consecuencia = "JASON WINS FLAWESS VICTORY FATALITY"
-                        funciones_repetidas.oportunidad(i,chances,advertencia,te_lo_dije,consecuencia)
+                        funciones.funciones_repetidas.oportunidad(i,chances,advertencia,te_lo_dije,consecuencia)
                         if(i==chances):
                             return 0
         case _:

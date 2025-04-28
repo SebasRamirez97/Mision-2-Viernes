@@ -1,7 +1,7 @@
 import time
 
-import funciones_str
-import funciones_repetidas
+import funciones.funciones_str
+import funciones.funciones_repetidas
 
 
 def desicion1(jugador:str)->int:
@@ -25,7 +25,7 @@ def desicion1(jugador:str)->int:
         match desicion:
             case 1: 
                 print("Mientras acomodas, repentinamente se va la luz, " \
-                "habra que tomar alguna decision")
+                "habra que tomar alguna decision.")
             case 2:
                     print("Salis afuera de la cabaña, en verdad era una cabaña solitaria " \
                     "en el medio del bosque. Se escuchan ruidos extraños pero tratas " \
@@ -33,12 +33,12 @@ def desicion1(jugador:str)->int:
             case 3:
                     i += 1
                     chances = 3
-                    advertencia = "Que aburrido toma una buena decision"
+                    advertencia = "Que aburrido toma una buena decision."
                     te_lo_dije = f"Ser aburrido tiene consecuencias {jugador}. Jason " \
                     "por favor haz los honores"
                     consecuencia = "JASON TE ARRANCA LA CABEZA"
                     
-                    funciones_repetidas.oportunidad(i,chances,advertencia,te_lo_dije,consecuencia)
+                    funciones.funciones_repetidas.oportunidad(i,chances,advertencia,te_lo_dije,consecuencia)
                     if(i == chances):
                           return 0
 
@@ -48,28 +48,28 @@ def desicion1(jugador:str)->int:
                     print("Esto no estaba planeado")
                     time.sleep(2)
                     print("Cargando...")
-                    funciones_str.caracter_por_caracter(" ",1)
-                    funciones_str.separar_caracteres("ALARMA")
-                    funciones_str.caracter_por_caracter(" ",1)
-                    funciones_str.separar_caracteres("COD")
-                    funciones_str.caracter_por_caracter("331258", 1)
+                    funciones.funciones_str.caracter_por_caracter(" ",1)
+                    funciones.funciones_str.separar_caracteres("ALARMA")
+                    funciones.funciones_str.caracter_por_caracter(" ",1)
+                    funciones.funciones_str.separar_caracteres("COD")
+                    funciones.funciones_str.caracter_por_caracter("331258", 1)
                     print(" ")
-                    funciones_str.caracter_por_caracter("Jason esta aqui", 3)
+                    funciones.funciones_str.caracter_por_caracter("Jason esta aqui", 3)
                     print(" ")
-                    funciones_str.separar_caracteres("HUYE")
+                    funciones.funciones_str.separar_caracteres("HUYE")
                     time.sleep(2)
                     print("Si puedes\n")
             case _: 
                     i += 1
                     chances = 3
                     advertencia = "Cuidado con lo que pones"
-                    te_lo_dije = "Usted no aprende ¿Verdad? *LLego Jason*"
+                    te_lo_dije = "Usted no aprende ¿Verdad? \n*LLego Jason*"
                     consecuencia = "JASON TE CORTA A LA MITAD"
                     
-                    funciones_repetidas.oportunidad(i,chances,advertencia,te_lo_dije,consecuencia)
+                    funciones.funciones_repetidas.oportunidad(i,chances,advertencia,te_lo_dije,consecuencia)
                     if(i == chances):
                           return 0
     return desicion
 
 
-
+                                                                               
