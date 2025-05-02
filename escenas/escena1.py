@@ -26,44 +26,45 @@ def desicion1(jugador:str)->int:
             case 1: 
                 print("Mientras acomodas, repentinamente se va la luz, " \
                 "habra que tomar alguna decision.")
-            case 2:
-                    print("Salis afuera de la cabaña, en verdad era una cabaña solitaria " \
-                    "en el medio del bosque. Se escuchan ruidos extraños pero tratas " \
-                    "de no darle importancia hasta que sientes que hay alguien detras.")
+            case 2:    
+                print("Salis afuera de la cabaña, en verdad era una cabaña solitaria " \
+                "en el medio del bosque. Comenzas a caminar, derrepente escuchas ruidos extraños a "\
+                "lo lejos intentas no darle importancia, pero cada vez se escuchan mas cerca es " \
+                "imposible pensar que no hay nada ¿Huir o esconderse? que decision vas a tomar.")
             case 3:
-                    i += 1
-                    chances = 3
-                    advertencia = "Que aburrido toma una buena decision."
-                    te_lo_dije = f"Ser aburrido tiene consecuencias {jugador}. Jason " \
-                    "por favor haz los honores"
-                    consecuencia = "JASON TE ARRANCA LA CABEZA"
+                i += 1
+                chances = 3
+                advertencia = "Que aburrido toma una buena decision."
+                te_lo_dije = f"Ser aburrido tiene consecuencias {jugador}. Jason " \
+                "por favor haz los honores"
+                consecuencia = "JASON TE ARRANCA LA CABEZA"
                     
-                    funciones.funciones_repetidas.oportunidad(i,chances,advertencia,te_lo_dije,consecuencia)
-                    if(i == chances):
-                          return 0
+                funciones.funciones_repetidas.oportunidad(i,chances,advertencia,te_lo_dije,consecuencia)
+                if(i == chances):
+                    return 0
 
             case 13:
-                    print("¿Que hiciste......?")
-                    time.sleep(2)
-                    print("Esto no estaba planeado")
-                    time.sleep(2)
-                    print("Cargando...")
-                    funciones.funciones_str.caracter_por_caracter(" ",1)
-                    funciones.funciones_str.separar_caracteres("ALARMA")
-                    funciones.funciones_str.caracter_por_caracter(" ",1)
-                    funciones.funciones_str.separar_caracteres("COD")
-                    funciones.funciones_str.caracter_por_caracter("331258", 1)
-                    print(" ")
-                    funciones.funciones_str.caracter_por_caracter("Jason esta aqui", 3)
-                    print(" ")
-                    funciones.funciones_str.separar_caracteres("HUYE")
-                    time.sleep(2)
-                    print("Si puedes\n")
+                print("¿Que hiciste......?")
+                time.sleep(2)
+                print("Esto no estaba planeado")
+                time.sleep(2)
+                print("Cargando...")
+                funciones.funciones_str.caracter_por_caracter(" ",1)
+                funciones.funciones_str.separar_caracteres("ALARMA")
+                funciones.funciones_str.caracter_por_caracter(" ",1)
+                funciones.funciones_str.separar_caracteres("COD")
+                funciones.funciones_str.caracter_por_caracter("331258", 1)
+                print(" ")
+                funciones.funciones_str.caracter_por_caracter("Jason esta aca", 3)
+                print(" ")
+                funciones.funciones_str.separar_caracteres("HUYE")
+                time.sleep(2)
+                print("Si puedes\n")
             case _: 
                     i += 1
                     chances = 3
                     advertencia = "Cuidado con lo que pones"
-                    te_lo_dije = "Usted no aprende ¿Verdad? \n*LLego Jason*"
+                    te_lo_dije = "Usted no aprende ¿Verdad? \n*Jason esta aca*"
                     consecuencia = "JASON TE CORTA A LA MITAD"
                     
                     funciones.funciones_repetidas.oportunidad(i,chances,advertencia,te_lo_dije,consecuencia)

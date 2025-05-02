@@ -1,5 +1,8 @@
 import time
 
+def saltito():
+     '''Pequeña funcion para doble salto de linea'''
+     print("\n\n")
 
 def salto_puntitos(cantidad_saltos:int):
         '''Imprime lineas de "...." segun cuantas quiera'''
@@ -34,9 +37,3 @@ def separar_caracteres(palabra:str):
             palabra_espaciada += k + " "
     print(palabra_espaciada)
 
-
-#SECTOR DE PRUEBAS NO OLVIDAR DEJARLOS COMENTADOS 
-#UNA VEZ TERMINADAS
-
-# caracter_por_caracter("HOLAAADREA",3)
-# separar_caracteres("HOLA")
